@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/css/materialize.min.css" />
+    <link rel="stylesheet" href="../static/css/wishlist.css" />
+    <script type="text/javascript" src="../static/scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../static/scripts/angular-route.min.js"></script>
+</head>
+<body class="teal lighten-1">
+    <!--NAVIGATION-->
+    <nav>
+        <div class="nav-wrapper  teal darken-1">
+            <a href="#" class="brand-logo">&nbsp; Wishlist<sup>&reg;</sup></a>
+        </div>
+    </nav>
+    <!--NAVIGATION-->
+
+    <div class="row valign-wrapper">
+        <div class="col s12 m7 center-block">
+            <div class="card hoverable center">
+                <div class="card-image">
+                    <h3 class="teal" style="color: white; padding: 5px;">Add Item To Wishlist</h3>
+                    <img class="center-block" style="width: 50%; height: auto;" src="../static/images/logo.gif">
+                </div>
+        <div class="card-content">
+          <div class="row valign-wrappers">
+            <form class="col s12" method="POST" action="{{ action }}">
+              <div class="row">
+
+                <div class="row">
+                  <label class="left col s3" for="url">Enter URL Of Item To Add To Wishlist</label>
+                  <input required id="url" class="col s9" type="text" name="url" />
+                </div>
+                
+                  <div class="row">
+                  <label class="left col s3" for="item_url">Enter Title Of Item To Add To Wishlist</label>
+                  <input required class="col s9" type="text" name="title" />
+                </div>
+                
+
+                <div class="input-field col s12">
+                  <textarea name="description" class="materialize-textarea" required></textarea>
+                  <label for="description">Item Description</label>
+                </div>
+
+                <label class="imgheading">Select Image To Use For Item Below</label>
+                <br><br>
+                
+                <div class="row imgs">
+                </div>
+                
+        
+                <div class="row">
+                  <input type="submit" class="btn center" value="Submit" name="submit" />
+                  <input type="text" id="id" hidden name="id" value="{{ id }}"/>
+                </div>
+
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="../static/scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="../static/scripts/materialize.min.js"></script>
+    <script src="../static/scripts/add_item.js"></script>
+    <script>
+        function validate() {
+            
+        }
+    </script>
+</body>
+
+</html>
