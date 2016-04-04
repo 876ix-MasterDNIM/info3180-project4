@@ -170,7 +170,7 @@ def add_item(id):
         wishlist_items = Info3180.models.Wishlist.query.filter_by(userid=id).all()
         if wishlist_items != []:
             data = {'error': None, 'data': {'wishes': [{'title':item.title, 'description':item.description, 'url':item.item_url, 'thumbnail':item.image_url} for item in wishlist_items]}, 'message': 'Success'}
-            return jsonify(response=data, test=str(wishlist_items))
+            return jsonify(response=data)
         else:
             data = {'error': '1', 'data' : {}, 'message':'No such wishlist exists'}
             return jsonify(response=data)
