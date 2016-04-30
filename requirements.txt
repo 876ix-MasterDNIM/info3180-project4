@@ -2,11 +2,10 @@ flask
 flask-login
 flask-sqlalchemy
 flask-wtf
-psycorg2
 bs4
 requests
-gevent
 gunicorn
 passlib
 flask-httpauth
 itsdangerous
+psycopg2
